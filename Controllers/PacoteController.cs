@@ -24,5 +24,11 @@ namespace DestinoCerto.Controllers
             ViewBag.Mensagem = "Cadastro concluído com sucesso!";
             return View();
         }
+        public IActionResult Lista()
+        {
+            PacoteBanco pack = new PacoteBanco();
+            List<Pacote> lista = pack.Query();
+            return View(lista);
+        }
     }
 }

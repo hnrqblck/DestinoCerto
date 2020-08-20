@@ -25,5 +25,51 @@ namespace DestinoCerto.Models
             comando.ExecuteNonQuery();
             conexao.Close();
         }
+        public List<Usuario> Query()
+        {
+            MySqlConnection conexao = new MySqlConnection (dadosConexao);
+
+            conexao.Open();
+            string query = "SELECT * FROM usuario";
+
+            MySqlCommand comando = new MySqlCommand(query, conexao);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            List<Usuario> lista = new List<Usuario>();
+            while(reader.Read())
+            {
+                Usuario user = new Usuario();
+                user.IdUser = reader.GetInt32("IdUser");
+                
+                if (!reader.IsDBNull(reader.GetOrdinal("NomeUser"))) //Verificação. Se o dado não estiver nulo. GetOrdinal garante performance mais otimizada.
+                {
+                    user.NomeUser = reader.GetString("NomeUser");
+                }
+
+                if (!reader.IsDBNull(reader.GetOrdinal("DataNascimento")))
+                {
+                    user.DataNascimento = reader.GetDateTime("DataNascimento");
+                }
+
+                if(!reader.IsDBNull(reader.GetOrdinal("Login")))
+                {
+                    user.Login = reader.GetString("Login");
+                }
+
+                if(!reader.IsDBNull(reader.GetOrdinal("Senha")))
+                {
+                    user.Senha = reader.GetString("Senha");
+                }
+
+                user.Tipo = reader.GetInt32("Tipo");
+
+                lista.Add(user);
+            }
+
+            conexao.Close();
+            return lista;
+
+        }
+
     }
 }

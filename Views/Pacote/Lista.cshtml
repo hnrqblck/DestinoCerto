@@ -1,0 +1,37 @@
+@model IEnumerable<Pacote>
+@{
+    ViewData["Title"] = "Listagem dos pacotes";
+}
+<div class="listaPacks">
+    <h2>Listagem dos Pacotes</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Saída</th>
+                <th>Retorno</th>
+                <th>Origem</th>
+                <th>Destino</th>
+                <th>Atrativos</th>
+                <th>Usuário</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Pacote p in Model)
+            {
+                <tr>
+                    <td>@p.IdPacote</td>
+                    <td>@p.NomePacote</td>
+                    <td>@p.Saida.ToString("dd/MM/yyyy")</td>
+                    <td>@p.Retorno.ToString("dd/MM/yyyy")</td>
+                    <td>@p.Origem</td>
+                    <td>@p.Destino</td>
+                    <td>@p.Atrativos</td>
+                    <td>@p.IdUser</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
