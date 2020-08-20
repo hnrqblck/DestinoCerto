@@ -14,21 +14,35 @@ namespace DestinoCerto.Controllers
     {
         public IActionResult Cadastro()
         {
+            if (HttpContext.Session.GetInt32("idUsuario") == null)
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
             return View();
         }
         [HttpPost]
         public IActionResult Cadastro(Pacote novoPacote)
         {
             PacoteBanco pack =  new PacoteBanco();
-            pack.Insert(novoPacote);
+            int id = (int)HttpContext.Session.GetInt32("idUsuario");
+            pack.Insert(novoPacote, id);
             ViewBag.Mensagem = "Cadastro concluído com sucesso!";
             return View();
         }
         public IActionResult Lista()
         {
+            if (HttpContext.Session.GetInt32("idUsuario") == null)
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
             PacoteBanco pack = new PacoteBanco();
             List<Pacote> lista = pack.Query();
             return View(lista);
+        }
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Login", "Usuario");
         }
     }
 }

@@ -38,3 +38,4 @@ C:\Users\jorge\OneDrive\Documents\GitHub\Projetos Pessoais\DestinoCerto\obj\Debu
 C:\Users\jorge\OneDrive\Documents\GitHub\Projetos Pessoais\DestinoCerto\obj\Debug\netcoreapp3.1\Razor\Views\Pacote\Cadastro.cshtml.g.cs
 C:\Users\jorge\OneDrive\Documents\GitHub\Projetos Pessoais\DestinoCerto\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Lista.cshtml.g.cs
 C:\Users\jorge\OneDrive\Documents\GitHub\Projetos Pessoais\DestinoCerto\obj\Debug\netcoreapp3.1\Razor\Views\Pacote\Lista.cshtml.g.cs
+C:\Users\jorge\OneDrive\Documents\GitHub\Projetos Pessoais\DestinoCerto\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Login.cshtml.g.cs

@@ -70,6 +70,42 @@ namespace DestinoCerto.Models
             return lista;
 
         }
+        public Usuario QueryLogin(Usuario usuario)
+        {
+            MySqlConnection conexao = new MySqlConnection(dadosConexao);
+            conexao.Open();
+            string sql = "SELECT * FROM usuario WHERE login = @Login AND senha = @Senha";
+
+            MySqlCommand comandoQuery = new MySqlCommand(sql, conexao);
+            comandoQuery.Parameters.AddWithValue("@Login", usuario.Login);
+            comandoQuery.Parameters.AddWithValue("@Senha", usuario.Senha);
+            MySqlDataReader reader = comandoQuery.ExecuteReader();
+
+            Usuario novoUsuario = null;
+            if (reader.Read())
+            {
+                novoUsuario = new Usuario();
+                novoUsuario.IdUser = reader.GetInt32("IdUser");
+
+                if (!reader.IsDBNull(reader.GetOrdinal("NomeUser")))
+                {
+                    novoUsuario.NomeUser = reader.GetString("NomeUser");
+                }
+                if (!reader.IsDBNull(reader.GetOrdinal("Login")))
+                {
+                    novoUsuario.Login = reader.GetString("Login");
+                }
+                if (!reader.IsDBNull(reader.GetOrdinal("Senha")))
+                {
+                    novoUsuario.Senha = reader.GetString("Senha");
+                }
+
+                
+            }
+
+            conexao.Close();
+            return novoUsuario;
+        }
 
     }
 }

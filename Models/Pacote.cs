@@ -11,6 +11,6 @@ namespace DestinoCerto.Models
         public string Origem {get; set;}
         public string Destino {get; set;}
         public string Atrativos {get; set;}
-        public int IdUser{get; set;}
+        public string  Usuario {get; set;}
     }
 }

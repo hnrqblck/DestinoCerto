@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http;
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -27,6 +28,10 @@
                     </ul>
                 </div>
             </div>
+            @if(Context.Session.GetInt32("idUsuario") != null)
+                    {
+                        <span>Olá, @Context.Session.GetString("nomeUsuario") - <a asp-action="Logout">Sair</a></span>
+                    }
         </nav>
     </header>
     <div class="container">

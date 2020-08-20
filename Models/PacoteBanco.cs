@@ -7,13 +7,13 @@ namespace DestinoCerto.Models
     {
         private const string dadosConexao = "Database=DestinoCerto; Data Source=localhost; User Id=root;";
 
-        public void Insert(Pacote novoPacote)
+        public void Insert(Pacote novoPacote, int idUsuario)
         {
             MySqlConnection conexao = new MySqlConnection (dadosConexao);
 
             conexao.Open();
 
-            string query = "INSERT INTO pacote(NomePacote, Origem, Destino, Atrativos, Saida, Retorno) VALUES (@NomePacote, @Origem, @Destino, @Atrativos, @Saida, @Retorno)";
+            string query = "INSERT INTO pacote(NomePacote, Origem, Destino, Atrativos, Saida, Retorno, Usuario) VALUES (@NomePacote, @Origem, @Destino, @Atrativos, @Saida, @Retorno, @Usuario)";
 
             MySqlCommand comando = new MySqlCommand(query, conexao);
 
@@ -23,6 +23,7 @@ namespace DestinoCerto.Models
             comando.Parameters.AddWithValue("@Atrativos", novoPacote.Atrativos);
             comando.Parameters.AddWithValue("@Saida", novoPacote.Saida);
             comando.Parameters.AddWithValue("@Retorno", novoPacote.Retorno);
+            comando.Parameters.AddWithValue("@Usuario", idUsuario);
             comando.ExecuteNonQuery();
             conexao.Close();
         }
@@ -42,38 +43,31 @@ namespace DestinoCerto.Models
             {
                 Pacote pack = new Pacote();
                 pack.IdPacote = reader.GetInt32("IdPacote");
-                //pack.IdUser = reader.GetInt32("IdUser");
-                
+
                 if (!reader.IsDBNull(reader.GetOrdinal("NomePacote"))) //Verificação. Se o dado não estiver nulo. GetOrdinal garante performance mais otimizada.
                 {
                     pack.NomePacote = reader.GetString("NomePacote");
                 }
-
                 if(!reader.IsDBNull(reader.GetOrdinal("Origem")))
                 {
                     pack.Origem = reader.GetString("Origem");
                 }
-
                 if(!reader.IsDBNull(reader.GetOrdinal("Destino")))
                 {
                     pack.Destino = reader.GetString("Destino");
                 }
-
                 if(!reader.IsDBNull(reader.GetOrdinal("Atrativos")))
                 {
                     pack.Atrativos = reader.GetString("Atrativos");
                 }
-
                 if (!reader.IsDBNull(reader.GetOrdinal("Saida")))
                 {
                     pack.Saida = reader.GetDateTime("Saida");
                 }
-
                 if (!reader.IsDBNull(reader.GetOrdinal("Retorno")))
                 {
                     pack.Retorno = reader.GetDateTime("Retorno");
                 }
-
                 lista.Add(pack);
             }
 

@@ -14402,6 +14402,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\jorge\\OneDrive\\Documents\\GitHub\\Projetos Pessoais\\DestinoCerto\\Views\\Usuario\\Login.cshtml",
+      "TargetPath": "Views\\Usuario\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\jorge\\OneDrive\\Documents\\GitHub\\Projetos Pessoais\\DestinoCerto\\Views\\Pacote\\Lista.cshtml",
       "TargetPath": "Views\\Pacote\\Lista.cshtml",
       "FileKind": "mvc"
