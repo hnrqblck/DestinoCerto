@@ -1,0 +1,18 @@
+@model List<Pacote>;
+
+@{
+    ViewData["Title"] = "Pacotes de Viagem";
+}
+<div class="vitrine">
+    <h1>@ViewData["Title"]</h1>
+    @*------------CARD-------------*@
+    @foreach (var p in Model)
+    {
+        <div class="cards">
+            <h1>@p.NomePacote</h1>
+            <p>Saindo de @p.Origem para @p.Destino </p>
+            <p>@p.Saida.ToString("dd-MM") - @p.Retorno.ToString("dd-MM")</p>
+            <p>@p.Atrativos</p>
+        </div>
+    }
+</div>

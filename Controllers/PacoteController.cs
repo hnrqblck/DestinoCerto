@@ -44,5 +44,11 @@ namespace DestinoCerto.Controllers
             HttpContext.Session.Clear();
             return RedirectToAction("Login", "Usuario");
         }
+        public IActionResult Vitrine()
+        {
+            PacoteBanco pack = new PacoteBanco();
+            List<Pacote> lista = pack.Query();
+            return View(lista);
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace DestinoCerto.Controllers
     {
         public IActionResult Cadastro()
         {
-            if (HttpContext.Session.GetInt32("idUsuario") == null || HttpContext.Session.GetInt32("tipoUsuario") != 0)
+            if (HttpContext.Session.GetInt32("idUsuario") == null || HttpContext.Session.GetInt32("tipoUsuario") == 1)
             {
                 return RedirectToAction("Login");
             }
@@ -30,7 +30,7 @@ namespace DestinoCerto.Controllers
         }
         public IActionResult Lista()
         {
-            if (HttpContext.Session.GetInt32("idUsuario") == null || HttpContext.Session.GetInt32("tipoUsuario") != 0)
+            if (HttpContext.Session.GetInt32("idUsuario") == null || HttpContext.Session.GetInt32("tipoUsuario") == 1)
             {
                 return RedirectToAction("Login");
             }
@@ -57,11 +57,19 @@ namespace DestinoCerto.Controllers
                 HttpContext.Session.SetInt32("tipoUsuario", usuarioSessao.Tipo);
 
 
-                return Redirect("Cadastro");
+                return Redirect("Menu");
             } else {
                 ViewBag.Mensagem = "Falha no login";
                 return View();
             }
+        }
+        public IActionResult Menu()
+        {
+            if (HttpContext.Session.GetInt32("idUsuario") == null)
+            {
+                return RedirectToAction("Login");
+            }
+            return View();
         }
         public IActionResult Logout()
         {

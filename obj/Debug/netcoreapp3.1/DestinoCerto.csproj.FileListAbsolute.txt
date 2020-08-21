@@ -21,7 +21,6 @@ C:\Users\jorge\OneDrive\Documents\GitHub\Projetos Pessoais\DestinoCerto\obj\Debu
 C:\Users\jorge\OneDrive\Documents\GitHub\Projetos Pessoais\DestinoCerto\obj\Debug\netcoreapp3.1\DestinoCerto.TagHelpers.output.cache
 C:\Users\jorge\OneDrive\Documents\GitHub\Projetos Pessoais\DestinoCerto\obj\Debug\netcoreapp3.1\DestinoCerto.RazorCoreGenerate.cache
 C:\Users\jorge\OneDrive\Documents\GitHub\Projetos Pessoais\DestinoCerto\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\jorge\OneDrive\Documents\GitHub\Projetos Pessoais\DestinoCerto\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\jorge\OneDrive\Documents\GitHub\Projetos Pessoais\DestinoCerto\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\jorge\OneDrive\Documents\GitHub\Projetos Pessoais\DestinoCerto\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Cadastro.cshtml.g.cs
 C:\Users\jorge\OneDrive\Documents\GitHub\Projetos Pessoais\DestinoCerto\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
@@ -39,3 +38,7 @@ C:\Users\jorge\OneDrive\Documents\GitHub\Projetos Pessoais\DestinoCerto\obj\Debu
 C:\Users\jorge\OneDrive\Documents\GitHub\Projetos Pessoais\DestinoCerto\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Lista.cshtml.g.cs
 C:\Users\jorge\OneDrive\Documents\GitHub\Projetos Pessoais\DestinoCerto\obj\Debug\netcoreapp3.1\Razor\Views\Pacote\Lista.cshtml.g.cs
 C:\Users\jorge\OneDrive\Documents\GitHub\Projetos Pessoais\DestinoCerto\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Login.cshtml.g.cs
+C:\Users\jorge\OneDrive\Documents\GitHub\Projetos Pessoais\DestinoCerto\obj\Debug\netcoreapp3.1\Razor\Views\Home\Empresa.cshtml.g.cs
+C:\Users\jorge\OneDrive\Documents\GitHub\Projetos Pessoais\DestinoCerto\obj\Debug\netcoreapp3.1\Razor\Views\Home\FaleConosco.cshtml.g.cs
+C:\Users\jorge\OneDrive\Documents\GitHub\Projetos Pessoais\DestinoCerto\obj\Debug\netcoreapp3.1\Razor\Views\Pacote\Vitrine.cshtml.g.cs
+C:\Users\jorge\OneDrive\Documents\GitHub\Projetos Pessoais\DestinoCerto\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Menu.cshtml.g.cs

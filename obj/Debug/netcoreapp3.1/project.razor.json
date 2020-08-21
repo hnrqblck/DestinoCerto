@@ -14392,6 +14392,11 @@
   "RootNamespace": "DestinoCerto",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\jorge\\OneDrive\\Documents\\GitHub\\Projetos Pessoais\\DestinoCerto\\Views\\Pacote\\Vitrine.cshtml",
+      "TargetPath": "Views\\Pacote\\Vitrine.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\jorge\\OneDrive\\Documents\\GitHub\\Projetos Pessoais\\DestinoCerto\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
@@ -14407,18 +14412,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\jorge\\OneDrive\\Documents\\GitHub\\Projetos Pessoais\\DestinoCerto\\Views\\Home\\Empresa.cshtml",
+      "TargetPath": "Views\\Home\\Empresa.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\jorge\\OneDrive\\Documents\\GitHub\\Projetos Pessoais\\DestinoCerto\\Views\\Pacote\\Lista.cshtml",
       "TargetPath": "Views\\Pacote\\Lista.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\jorge\\OneDrive\\Documents\\GitHub\\Projetos Pessoais\\DestinoCerto\\Views\\Usuario\\Lista.cshtml",
-      "TargetPath": "Views\\Usuario\\Lista.cshtml",
+      "FilePath": "c:\\Users\\jorge\\OneDrive\\Documents\\GitHub\\Projetos Pessoais\\DestinoCerto\\Views\\Usuario\\Menu.cshtml",
+      "TargetPath": "Views\\Usuario\\Menu.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\jorge\\OneDrive\\Documents\\GitHub\\Projetos Pessoais\\DestinoCerto\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FilePath": "c:\\Users\\jorge\\OneDrive\\Documents\\GitHub\\Projetos Pessoais\\DestinoCerto\\Views\\Usuario\\Lista.cshtml",
+      "TargetPath": "Views\\Usuario\\Lista.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14434,6 +14444,11 @@
     {
       "FilePath": "c:\\Users\\jorge\\OneDrive\\Documents\\GitHub\\Projetos Pessoais\\DestinoCerto\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jorge\\OneDrive\\Documents\\GitHub\\Projetos Pessoais\\DestinoCerto\\Views\\Home\\FaleConosco.cshtml",
+      "TargetPath": "Views\\Home\\FaleConosco.cshtml",
       "FileKind": "mvc"
     },
     {

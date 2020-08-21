@@ -16,7 +16,11 @@ namespace DestinoCerto.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult FaleConosco()
+        {
+            return View();
+        }
+        public IActionResult Empresa()
         {
             return View();
         }

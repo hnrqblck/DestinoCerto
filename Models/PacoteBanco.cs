@@ -33,7 +33,8 @@ namespace DestinoCerto.Models
             MySqlConnection conexao = new MySqlConnection (dadosConexao);
 
             conexao.Open();
-            string query = "SELECT * FROM pacote";
+            //string query = "SELECT usuario.NomeUser, pacote.* FROM usuario, pacote";
+            string query = "SELECT * FROm pacote";
 
             MySqlCommand comando = new MySqlCommand(query, conexao);
             MySqlDataReader reader = comando.ExecuteReader();
@@ -48,6 +49,17 @@ namespace DestinoCerto.Models
                 {
                     pack.NomePacote = reader.GetString("NomePacote");
                 }
+
+
+
+                /*if(!reader.IsDBNull(reader.GetOrdinal("usuario.NomeUser")))
+                {
+                    pack.Usuario = reader.GetString("usuario.NomeUser");
+                }*/
+
+
+
+
                 if(!reader.IsDBNull(reader.GetOrdinal("Origem")))
                 {
                     pack.Origem = reader.GetString("Origem");
