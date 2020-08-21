@@ -2,7 +2,7 @@
 @{
     ViewData["Title"] = "Listagem dos pacotes";
 }
-<div class="listaPacks">
+<div id="listaPacks" class="listagem">
     <h2>Listagem dos Pacotes</h2>
 
     <table border="1">
@@ -22,13 +22,13 @@
             @foreach (Pacote p in Model)
             {
                 <tr>
-                    <td>@p.IdPacote</td>
+                    <td class="tag-lighter">@p.IdPacote</td>
                     <td>@p.NomePacote</td>
-                    <td>@p.Saida.ToString("dd/MM/yyyy")</td>
+                    <td class="tag-lighter">@p.Saida.ToString("dd/MM/yyyy")</td>
                     <td>@p.Retorno.ToString("dd/MM/yyyy")</td>
-                    <td>@p.Origem</td>
+                    <td class="tag-lighter">@p.Origem</td>
                     <td>@p.Destino</td>
-                    <td>@p.Atrativos</td>
+                    <td class="tag-lighter">@p.Atrativos</td>
                     <td>@p.Usuario</td>
                 </tr>
             }
